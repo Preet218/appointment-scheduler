@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: appointment-scheduler
+    env: node
+    buildCommand: npm install
+    startCommand: node server.js
+    plan: free
+    disk:
+      name: appointments-data
+      mountPath: /data
+      sizeGB: 1
