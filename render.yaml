@@ -5,7 +5,6 @@ services:
     buildCommand: npm install
     startCommand: node server.js
     plan: free
-    disk:
-      name: appointments-data
-      mountPath: /data
-      sizeGB: 1
+    envVars:
+      - key: DATABASE_URL
+        sync: false   # you'll paste this value manually in the Render dashboard
